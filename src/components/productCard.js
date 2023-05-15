@@ -1,14 +1,12 @@
-// card to display product information
-// import { keyboards, mice, } from "../inventory";
 
-function ProductCard({ product }) {
+function ProductCard({ product, category, handleCartAdd }) {
     return (
         <>
             <div>
                 <h3>{product.model}</h3>
                 <p>{product.brand}</p>
                 <p>{product.price}</p>
-                <button className="add-to-cart-btn">add to cart</button>
+                <button className="add-to-cart-btn" onClick={e => handleCartAdd(category, product.id)}>add to cart</button>
             </div>
         </>
     )
