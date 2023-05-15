@@ -2,7 +2,7 @@ import { useState } from "react";
 // import { keyboards, mice, headsets, controllers } from "../inventory";
 import ProductsContainer from "./productsContainer";
 
-function Products() {
+function Products({ cart, handleCartAdd }) {
     const [category, setCategory] = useState("keyboards");
 
     function handleCategoryChange(event) {
@@ -11,17 +11,17 @@ function Products() {
     return (
         <>
             <h1>Products</h1>
-            <label htmlFor="category-select">select a category</label>
-            <select name="category-select" value={category} onChange={handleCategoryChange}>
+            <label htmlFor="category-select">browse by category</label>
+            <select name="category-select" id="category-select" value={category} onChange={handleCategoryChange}>
                 <option value="keyboards">keyboards</option>
                 <option value="mice">mice</option>
                 <option value="headsets">headsets</option>
                 <option value="controllers">controllers</option>
             </select>
-            <ProductsContainer category={category} />
+            <ProductsContainer category={category} cart={cart} handleCartAdd={handleCartAdd} />
         </>
     )
-}
+};
 
 
 export default Products;
