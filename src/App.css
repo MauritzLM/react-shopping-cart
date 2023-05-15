@@ -12,8 +12,17 @@ body {
   font-size: 1.6rem;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 nav ul {
   display: flex;
   gap: 2em;
   list-style: none;
 }
+
+/* .shopping-cart {
+  float: right;
+} */
