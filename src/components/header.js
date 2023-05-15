@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
-function Header() {
+// pass cart state as props*
+function Header({ cart }) {
     return (
         <>
             <header>
@@ -13,7 +14,7 @@ function Header() {
                             <Link to="/products">Browse products</Link>
                         </li>
                     </ul>
-
+                    <Link to="/shopping-cart"><div>cart items: {cart.length}</div></Link>
                 </nav>
             </header>
         </>
