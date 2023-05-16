@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function ShoppingCart({ cart, handleCartRemove }) {
 
-    if (!cart) {
+    if (!cart.length) {
         return (
             <>
                 <div className="shopping-cart">
