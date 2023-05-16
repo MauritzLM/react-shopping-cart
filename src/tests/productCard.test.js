@@ -14,5 +14,5 @@ describe("product card", () => {
         expect(screen.getByRole("button")).toHaveTextContent("add to cart");
     });
 
-    // test button text change when added to cart*
+    // test add to cart button*
 });

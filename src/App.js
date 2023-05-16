@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Router } from 'react-router-dom';
 import './App.css';
 import Header from './components/header';
 import Home from './components/home';
