@@ -11,23 +11,37 @@ import ShoppingCart from './components/cart';
 import { inventory } from './inventory';
 import { v4 as uuidv4 } from "uuid";
 
-// implement cart state*
 function App() {
   const [cart, setCart] = useState([]);
+  const [total, setTotal] = useState(0);
 
   // handle cart add
   function handleCartAdd(category, itemid) {
-    // find item in category arr
-    const result = inventory[category].find(({ id }) => id === itemid);
-    result.instanceId = uuidv4();
+    // find product
+    let result = inventory[category].find(({ id }) => id === itemid);
 
-    setCart([...cart, result]);
+    // create new cart item(instance)
+    let cartItem = { ...result, instanceId: uuidv4() };
+
+    setCart([...cart, cartItem]);
+
+    setTotal(cart.reduce((accumulator, currentValue) =>
+      accumulator + Number(currentValue.price), Number(result.price)))
   }
 
-  // handle cart remove 
+  // handle cart remove* 
   function handleCartRemove(instanceId) {
-    setCart(cart.filter(item => item.instanceId !== instanceId))
+    setCart(cart.filter(item => item.instanceId !== instanceId));
+
+    setTotal(cart.reduce((accumulator, currentValue) =>
+      accumulator + Number(currentValue.price), 0))
+
   }
+
+  // function calculateTotalPrice() {
+  //   setTotal(cart.reduce((accumulator, currentValue) =>
+  //     accumulator + Number(currentValue.price), 0))
+  // }
 
   return (
     <div className="App">
@@ -35,7 +49,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path='/shopping-cart' element={<ShoppingCart cart={cart} handleCartRemove={handleCartRemove} />} />
+          <Route path='/shopping-cart' element={<ShoppingCart cart={cart} handleCartRemove={handleCartRemove} total={total} />} />
           <Route path="/products">
             <Route index element={<Products cart={cart} handleCartAdd={handleCartAdd} />} />
             <Route path=':id' element={<ProductCard />} />
