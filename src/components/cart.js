@@ -1,7 +1,7 @@
 import CartItem from "./cartItem";
 import { Link } from "react-router-dom";
 
-function ShoppingCart({ cart, handleCartRemove }) {
+function ShoppingCart({ cart, handleCartRemove, total }) {
 
     if (!cart.length) {
         return (
@@ -14,9 +14,7 @@ function ShoppingCart({ cart, handleCartRemove }) {
             </>
         )
     } else {
-        // calculate total
-        const total = cart.reduce((accumulator, currentValue) =>
-            accumulator + Number(currentValue.price), 0)
+
         return (
             <>
                 <div className="shopping-cart">
