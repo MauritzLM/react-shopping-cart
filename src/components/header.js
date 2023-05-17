@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-// pass cart state as props*
 function Header({ cart }) {
     return (
         <>
