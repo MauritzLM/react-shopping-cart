@@ -11,7 +11,8 @@ export const inventory = {
         { id: uuidv4(), brand: 'corsair', model: 'c700', price: '70.00', img: '', instanceId: '' }
     ],
     controllers: [
-        { id: uuidv4(), brand: 'xbox', model: 'series', price: '80', img: '', instanceId: '' }
+        { id: uuidv4(), brand: 'xbox', model: 'series', price: '80', img: '', instanceId: '' },
+        { id: uuidv4(), brand: 'sony', model: 'ps5', price: '85', img: '', instanceId: '' }
     ]
 
 }
