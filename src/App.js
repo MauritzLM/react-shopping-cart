@@ -19,14 +19,18 @@ function App() {
   const [cart, setCart] = useState(emptyCart);
 
   // handle cart add
-  function handleCartAdd(category, itemid) {
-    // find product
+  function handleCartAdd(category, itemid, numberOfItems) {
+    // find product in inventory
     let result = inventory[category].find(({ id }) => id === itemid);
 
-    // create new cart item(instance)
-    let cartItem = { ...result, instanceId: uuidv4() };
+    let items = []
+    for (let i = 0; i < numberOfItems; i++) {
+      // create new cart item(instance) for each item
+      let cartItem = { ...result, instanceId: uuidv4() };
+      items.push(cartItem);
+    }
 
-    setCart([...cart, cartItem]);
+    setCart([...cart, ...items]);
   }
 
   // handle cart remove
