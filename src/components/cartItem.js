@@ -4,7 +4,7 @@ function CartItem({ product, handleCartRemove }) {
         <>
             <div>
                 <h4>{product.model}</h4>
-                <p>{product.price}</p>
+                <p>${product.price}</p>
                 <button onClick={() => handleCartRemove(product.instanceId)}>remove item</button>
             </div>
         </>
