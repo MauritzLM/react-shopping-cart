@@ -10,15 +10,17 @@ function Products({ cart, handleCartAdd }) {
     }
     return (
         <>
-            <h1>Products</h1>
-            <label htmlFor="category-select">browse by category</label>
-            <select name="category-select" id="category-select" value={category} onChange={handleCategoryChange}>
-                <option value="keyboards">keyboards</option>
-                <option value="mice">mice</option>
-                <option value="headsets">headsets</option>
-                <option value="controllers">controllers</option>
-            </select>
-            <ProductsContainer category={category} cart={cart} handleCartAdd={handleCartAdd} />
+            <div className="products-display">
+                <h1>Products</h1>
+                <label htmlFor="category-select">browse by category</label>
+                <select name="category-select" id="category-select" value={category} onChange={handleCategoryChange}>
+                    <option value="keyboards">keyboards</option>
+                    <option value="mice">mice</option>
+                    <option value="headsets">headsets</option>
+                    <option value="controllers">controllers</option>
+                </select>
+                <ProductsContainer category={category} cart={cart} handleCartAdd={handleCartAdd} />
+            </div>
         </>
     )
 };
