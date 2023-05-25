@@ -6,6 +6,6 @@ import Home from "../components/home";
 describe("Home component", () => {
     it("renders correct heading", () => {
         render(<Home />);
-        expect(screen.getByRole("heading").textContent).toMatch(/home page/i);
+        expect(screen.getByRole("heading").textContent).toMatch(/peripheral store/i);
     });
 });
