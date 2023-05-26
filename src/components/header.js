@@ -13,7 +13,7 @@ function Header({ cart }) {
                             <Link to="/products">Browse products</Link>
                         </li>
                     </ul>
-                    <Link to="/shopping-cart"><div>cart items: {cart.length}</div></Link>
+                    <Link to="/shopping-cart"><div><ion-icon name="cart"></ion-icon><span className="cart-number">{cart.length}</span></div></Link>
                 </nav>
             </header>
         </>
