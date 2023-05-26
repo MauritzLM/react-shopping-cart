@@ -15,8 +15,11 @@ function ShoppingCart({ cart, handleCartRemove, handleConfirmedPayment }) {
     }
 
     // calculate total
-    const total = cart.reduce((accumulator, currentValue) =>
+    let total = cart.reduce((accumulator, currentValue) =>
         accumulator + Number(currentValue.price), 0)
+
+    // format total
+    total = total.toFixed(2)
 
     if (checkout) {
         return (
@@ -41,12 +44,16 @@ function ShoppingCart({ cart, handleCartRemove, handleConfirmedPayment }) {
             <>
                 <div className="shopping-cart">
                     <h3>My cart</h3>
-                    {cart.map((item, index) => {
-                        return <CartItem product={item} key={index} handleCartRemove={handleCartRemove} />
-                    })}
-                    <p>Total: ${total}</p>
-                    <Link to="/products">Continue shopping</Link>
-                    <button onClick={() => handleCheckout()}>Proceed to checkout</button>
+                    <div className="cart-items-container">
+                        {cart.map((item, index) => {
+                            return <CartItem product={item} key={index} handleCartRemove={handleCartRemove} />
+                        })}
+                    </div>
+                    <p className="cart-total">Total: ${total}</p>
+                    <div className="cart-options">
+                        <Link to="/products">Continue shopping</Link>
+                        <button onClick={() => handleCheckout()}>Proceed to checkout</button>
+                    </div>
                 </div>
             </>
         )
