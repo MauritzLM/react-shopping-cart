@@ -22,7 +22,9 @@ function Checkout({ cart, total, handleBackToCart, handleConfirmedPayment }) {
     if (isLoading) {
         return (
             <>
-                <p>Loading...</p>
+                <div className="checkout">
+                    <p>Loading...</p>
+                </div>
             </>
         )
     }
@@ -30,16 +32,21 @@ function Checkout({ cart, total, handleBackToCart, handleConfirmedPayment }) {
     if (paymentMade) {
         return (
             <>
-                <Confirmed />
+                <div className="checkout">
+                    <Confirmed />
+                </div>
+
             </>
         )
     } else {
         return (
             <>
-                <div>
-                    <p>Confirm to pay ${total}</p>
-                    <button className="confirm-btn" onClick={() => handlePayment()}>Confirm your purchase</button>
-                    <button onClick={() => handleBackToCart()}>back to cart</button>
+                <div className="checkout">
+                    <p>Confirm to pay <span>${total}</span></p>
+                    <div>
+                        <button onClick={() => handleBackToCart()}>back to cart</button>
+                        <button className="confirm-btn" onClick={() => handlePayment()}>Confirm your purchase</button>
+                    </div>
                 </div>
             </>
         )

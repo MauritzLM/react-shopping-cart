@@ -32,7 +32,7 @@ function ShoppingCart({ cart, handleCartRemove, handleConfirmedPayment }) {
         return (
             <>
                 <div className="shopping-cart">
-                    <h3>My cart</h3>
+                    <h2>My cart</h2>
                     <p>cart is empty</p>
                     <Link to="/products">Continue shopping</Link>
                 </div>
@@ -43,13 +43,13 @@ function ShoppingCart({ cart, handleCartRemove, handleConfirmedPayment }) {
         return (
             <>
                 <div className="shopping-cart">
-                    <h3>My cart</h3>
+                    <h2>My cart</h2>
                     <div className="cart-items-container">
                         {cart.map((item, index) => {
                             return <CartItem product={item} key={index} handleCartRemove={handleCartRemove} />
                         })}
                     </div>
-                    <p className="cart-total">Total: ${total}</p>
+                    <p className="cart-total">Total: <span>${total}</span></p>
                     <div className="cart-options">
                         <Link to="/products">Continue shopping</Link>
                         <button onClick={() => handleCheckout()}>Proceed to checkout</button>
