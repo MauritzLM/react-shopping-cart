@@ -31,7 +31,7 @@ function ShoppingCart({ cart, handleCartRemove, handleConfirmedPayment }) {
     if (!cart.length) {
         return (
             <>
-                <div className="shopping-cart">
+                <div className="shopping-cart-empty">
                     <h2>My cart</h2>
                     <p>cart is empty</p>
                     <Link to="/products">Continue shopping</Link>
@@ -49,10 +49,13 @@ function ShoppingCart({ cart, handleCartRemove, handleConfirmedPayment }) {
                             return <CartItem product={item} key={index} handleCartRemove={handleCartRemove} />
                         })}
                     </div>
-                    <p className="cart-total">Total: <span>${total}</span></p>
                     <div className="cart-options">
-                        <Link to="/products">Continue shopping</Link>
-                        <button onClick={() => handleCheckout()}>Proceed to checkout</button>
+                        <h3>Order Summary</h3>
+                        <p className="cart-total">Total: <span>${total}</span></p>
+                        <div>
+                            <Link to="/products">Continue shopping</Link>
+                            <button onClick={() => handleCheckout()}>Proceed to checkout</button>
+                        </div>
                     </div>
                 </div>
             </>

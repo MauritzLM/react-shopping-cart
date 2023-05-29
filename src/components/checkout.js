@@ -11,7 +11,7 @@ function Checkout({ cart, total, handleBackToCart, handleConfirmedPayment }) {
         setIsLoading(true);
 
         await new Promise((resolve) => {
-            setTimeout(() => resolve(setIsLoading(false)), 2000)
+            setTimeout(() => resolve(setIsLoading(false)), 5000)
         });
 
         setPaymentMade(true);
@@ -23,7 +23,7 @@ function Checkout({ cart, total, handleBackToCart, handleConfirmedPayment }) {
         return (
             <>
                 <div className="checkout">
-                    <p>Loading...</p>
+                    <div className="spinner"></div>
                 </div>
             </>
         )
@@ -42,9 +42,9 @@ function Checkout({ cart, total, handleBackToCart, handleConfirmedPayment }) {
         return (
             <>
                 <div className="checkout">
-                    <p>Confirm to pay <span>${total}</span></p>
+                    <p>Confirm to pay <span>${" "}{total}</span></p>
                     <div>
-                        <button onClick={() => handleBackToCart()}>back to cart</button>
+                        <button className="back-btn" onClick={() => handleBackToCart()}>back to cart</button>
                         <button className="confirm-btn" onClick={() => handlePayment()}>Confirm your purchase</button>
                     </div>
                 </div>
