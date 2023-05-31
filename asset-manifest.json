@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-shopping-cart/static/css/main.20ca0ef8.css",
-    "main.js": "/react-shopping-cart/static/js/main.30321bcd.js",
+    "main.js": "/react-shopping-cart/static/js/main.f9eecc7c.js",
     "static/js/787.d6fe38e8.chunk.js": "/react-shopping-cart/static/js/787.d6fe38e8.chunk.js",
     "static/media/keyboard4.jpeg": "/react-shopping-cart/static/media/keyboard4.1b086f527a224ae98d60.jpeg",
     "static/media/xbox2.jpeg": "/react-shopping-cart/static/media/xbox2.20fa031329ad92c5030d.jpeg",
@@ -21,11 +21,11 @@
     "static/media/ps4-camo.jpeg": "/react-shopping-cart/static/media/ps4-camo.a01ccd380f134d4fd237.jpeg",
     "index.html": "/react-shopping-cart/index.html",
     "main.20ca0ef8.css.map": "/react-shopping-cart/static/css/main.20ca0ef8.css.map",
-    "main.30321bcd.js.map": "/react-shopping-cart/static/js/main.30321bcd.js.map",
+    "main.f9eecc7c.js.map": "/react-shopping-cart/static/js/main.f9eecc7c.js.map",
     "787.d6fe38e8.chunk.js.map": "/react-shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.20ca0ef8.css",
-    "static/js/main.30321bcd.js"
+    "static/js/main.f9eecc7c.js"
   ]
 }
