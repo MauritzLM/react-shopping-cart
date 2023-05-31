@@ -419,7 +419,7 @@ button {
 /* Media queries */
 
 /* change cart items layout, increase grid column size */
-@media screen and (min-width:500px) {
+@media screen and (min-width:500px) and (orientation: landscape) {
   .products-container {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 
@@ -455,7 +455,7 @@ button {
 }
 
 /* change cart layout, empty-cart and checkout width */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) and (orientation: landscape) {
   .products-display {
     padding: 2em;
   }
