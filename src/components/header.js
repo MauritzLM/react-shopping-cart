@@ -7,13 +7,13 @@ function Header({ cart }) {
                 <nav>
                     <ul>
                         <li>
-                            <Link to="/">Home</Link>
+                            <Link to="/react-shopping-cart">Home</Link>
                         </li>
                         <li>
-                            <Link to="/products">Browse products</Link>
+                            <Link to="/react-shopping-cart/products">Browse products</Link>
                         </li>
                     </ul>
-                    <Link to="/shopping-cart"><div><ion-icon name="cart"></ion-icon><span className="cart-number">{cart.length}</span></div></Link>
+                    <Link to="/react-shopping-cart/shopping-cart"><div><ion-icon name="cart"></ion-icon><span className="cart-number">{cart.length}</span></div></Link>
                 </nav>
             </header>
         </>

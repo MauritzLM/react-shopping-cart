@@ -20,7 +20,7 @@ function Products({ cart, handleCartAdd }) {
                     <option value="headsets">headsets</option>
                     <option value="controllers">controllers</option>
                 </select>
-                <Link to="/shopping-cart" className="view-cart">View cart</Link>
+                <Link to="/react-shopping-cart/shopping-cart" className="view-cart">View cart</Link>
                 <ProductsContainer category={category} cart={cart} handleCartAdd={handleCartAdd} />
             </div>
         </>

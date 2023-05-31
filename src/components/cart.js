@@ -34,7 +34,7 @@ function ShoppingCart({ cart, handleCartRemove, handleConfirmedPayment }) {
                 <div className="shopping-cart-empty">
                     <h2>My cart</h2>
                     <p>cart is empty</p>
-                    <Link to="/products">Continue shopping</Link>
+                    <Link to="/react-shopping-cart/products">Continue shopping</Link>
                 </div>
             </>
         )
@@ -53,7 +53,7 @@ function ShoppingCart({ cart, handleCartRemove, handleConfirmedPayment }) {
                         <h3>Order Summary</h3>
                         <p className="cart-total">Total: <span>${total}</span></p>
                         <div>
-                            <Link to="/products">Continue shopping</Link>
+                            <Link to="/react-shopping-cart/products">Continue shopping</Link>
                             <button onClick={() => handleCheckout()}>Proceed to checkout</button>
                         </div>
                     </div>
