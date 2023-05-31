@@ -48,7 +48,7 @@ function App() {
       <Header cart={cart} />
       <main>
         <Routes>
-          <Route path="/shopping-cart-home" element={<Home />} />
+          <Route path="/react-shopping-cart" element={<Home />} />
           <Route path='/shopping-cart' element={<ShoppingCart cart={cart} handleCartRemove={handleCartRemove} handleConfirmedPayment={handleConfirmedPayment} />} />
           <Route path="/products">
             <Route index element={<Products cart={cart} handleCartAdd={handleCartAdd} />} />
