@@ -4,7 +4,6 @@ import ProductCard from "./productCard";
 function ProductsContainer({ category, cart, handleCartAdd }) {
     return (
         <>
-            {/* <h2>{category}</h2> */}
             <div className="products-container">
                 {
                     inventory[category].map(item => {
