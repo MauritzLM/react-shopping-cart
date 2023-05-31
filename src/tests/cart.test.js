@@ -9,8 +9,8 @@ import { MemoryRouter } from "react-router-dom";
 
 // cart, handleCartRemove setup
 const cartRemoveMock = jest.fn();
-const cart = [{ id: "101", brand: "corsair", model: "h500", price: "120", img: "", instanceId: "01", },
-{ id: "102", brand: "xbox", model: "series", price: "80", img: "", instanceId: "02" }];
+const cart = [{ id: "101", brand: "corsair", model: "h500", price: "120.75", img: "", instanceId: "01", },
+{ id: "102", brand: "xbox", model: "series", price: "80.69", img: "", instanceId: "02" }];
 
 const ShoppingCartTotal = ({ cart }) => {
     // calculate total
@@ -22,7 +22,6 @@ const ShoppingCartTotal = ({ cart }) => {
         </>
     )
 };
-
 
 describe("shopping cart display", () => {
     it("shopping cart renders correctly when empty", () => {
@@ -51,6 +50,6 @@ describe("shopping cart display", () => {
     it("calculates total and displays it correctly", () => {
         render(<ShoppingCartTotal cart={cart} />);
 
-        expect(screen.getByTestId("total")).toHaveTextContent("Total: $200");
+        expect(screen.getByTestId("total")).toHaveTextContent("Total: $201.44");
     });
 });
