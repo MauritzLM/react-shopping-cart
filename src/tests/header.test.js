@@ -18,6 +18,8 @@ describe("header renders correctly", () => {
     it("renders correct amount of cart items", () => {
         render(<MemoryRouter><Header cart={cart} /></MemoryRouter>);
 
-        expect(screen.getByText(/cart items:/i)).toHaveTextContent("cart items: 2");
+        const links = screen.getAllByRole("link");
+
+        expect(links[2]).toHaveTextContent("2");
     });
 });
